@@ -13,3 +13,9 @@ sed -i 's/192.168.1.1/192.168.99.1/g' package/base-files/files/bin/config_genera
 
 # Modify hostname
 sed -i 's/OpenWrt/SEED AC3/g' package/base-files/files/bin/config_generate
+
+
+# 设置主机名映射，解决安卓原生 TV 无法联网的问题
+uci add dhcp domain
+uci set "dhcp.@domain[-1].name=time.android.com"
+uci set "dhcp.@domain[-1].ip=203.107.6.88"
