@@ -12,8 +12,8 @@
 name: Update Checker
 
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: openwrt-24.10
+  REPO_URL: https://github.com/BeeconMini/immortalwrt
+  REPO_BRANCH: 25.12.0-rc2
 
 on:
   workflow_dispatch:
